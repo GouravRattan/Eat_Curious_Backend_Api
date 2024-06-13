@@ -1,4 +1,3 @@
-
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json;
 using COMMON_PROJECT_STRUCTURE_API.services;
@@ -15,6 +14,9 @@ ConfigureServices(s =>
     s.AddSingleton<Register>();
     s.AddSingleton<forgotPassword>();
     s.AddSingleton<deleteProfile>();
+    s.AddSingleton<addProductData>();
+    s.AddSingleton<getProductData>();
+    s.AddSingleton<cartData>();
 
     s.AddAuthorization();
     s.AddControllers();
@@ -33,7 +35,7 @@ ConfigureServices(s =>
     app.UseCors(options =>
              options.WithOrigins("https://localhost:5001", "http://localhost:5002")
             // options.WithOrigins("*")
-            .AllowAnyHeader().AllowAnyMethod().AllowCredentials());
+            .AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
     app.UseRouting();
     app.UseStaticFiles();
 
@@ -60,14 +62,11 @@ ConfigureServices(s =>
             requestData rData = JsonSerializer.Deserialize<requestData>(body);
             if (rData.eventID == "1006") // update
                 await http.Response.WriteAsJsonAsync(await register.Registration(rData));
-
         });
-
 
 
         var forgotPassword = e.ServiceProvider.GetRequiredService<forgotPassword>();
         e.MapPost("forgotPassword", [AllowAnonymous] async (HttpContext http) =>
-
         {
             var body = await new StreamReader(http.Request.Body).ReadToEndAsync();
             requestData rData = JsonSerializer.Deserialize<requestData>(body);
@@ -78,12 +77,63 @@ ConfigureServices(s =>
 
         var deleteProfile = e.ServiceProvider.GetRequiredService<deleteProfile>();
         e.MapPost("deleteProfile", [AllowAnonymous] async (HttpContext http) =>
-
         {
             var body = await new StreamReader(http.Request.Body).ReadToEndAsync();
             requestData rData = JsonSerializer.Deserialize<requestData>(body);
-            if(rData.eventID == "1009") await http.Response.WriteAsJsonAsync(await deleteProfile.DeleteProfile(rData));
+            if (rData.eventID == "1009") await http.Response.WriteAsJsonAsync(await deleteProfile.DeleteProfile(rData));
         });
+
+
+
+        var addProductData = e.ServiceProvider.GetRequiredService<addProductData>();
+        e.MapPost("addProductData", [AllowAnonymous] async (HttpContext http) =>
+        {
+            var body = await new StreamReader(http.Request.Body).ReadToEndAsync();
+            requestData rData = JsonSerializer.Deserialize<requestData>(body);
+            if (rData.eventID == "1001") await http.Response.WriteAsJsonAsync(await addProductData.AddProductData(rData));
+        });
+
+
+        // var getProductData = e.ServiceProvider.GetRequiredService<getProductData>();
+        // e.MapPost("getProductData", [AllowAnonymous] async (HttpContext http) =>
+        // {
+        //     try
+        //     {
+        //         var body = await new StreamReader(http.Request.Body).ReadToEndAsync();
+        //         requestData rData = JsonSerializer.Deserialize<requestData>(body);
+        //         if (rData != null && rData.eventID == "1004")
+        //         {
+        //             var response = await getProductData.GetProductData(rData);
+        //             await http.Response.WriteAsJsonAsync(response);
+        //         }
+        //         else
+        //         {
+        //             http.Response.StatusCode = 400; // Bad Request
+        //             await http.Response.WriteAsJsonAsync(new { rStatus = 400, rMessage = "Invalid request data" });
+        //         }
+        //     }
+        //     catch (Exception ex)
+        //     {
+        //         Console.WriteLine(ex.Message);
+        //         http.Response.StatusCode = 500; // Internal Server Error
+        //         await http.Response.WriteAsJsonAsync(new { rStatus = 500, rMessage = "Internal server error" });
+        //     }
+        // });
+
+
+
+        var cartData = e.ServiceProvider.GetRequiredService<cartData>();
+        e.MapPost("cartData ",
+        [AllowAnonymous] async (HttpContext http) =>
+        {
+            var body = await new StreamReader(http.Request.Body).ReadToEndAsync();
+            requestData rData = JsonSerializer.Deserialize<requestData>(body);
+            if (rData.eventID == "1001") // update
+                await http.Response.WriteAsJsonAsync(await cartData.AddItemIntoCart(rData));
+        });
+
+
+
 
         e.MapGet("/bing",
           async c => await c.Response.WriteAsJsonAsync("{'Name':'Anish','Age':'26','Project':'COMMON_PROJECT_STRUCTURE_API'}"));
@@ -94,7 +144,7 @@ public record requestData
 {
     [Required]
     public string eventID { get; set; }
-    [Required]
+    [Required]  
     public IDictionary<string, object> addInfo { get; set; }
 }
 

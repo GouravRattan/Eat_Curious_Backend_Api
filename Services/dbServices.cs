@@ -276,5 +276,39 @@ public class dbServices{
              connReadOnly.Close(); //here is close the connection
              return allTables; // if success return allTables
     }
+
+public async Task<List<Dictionary<string, object>>> ExecuteSQLAsync(string query, MySqlParameter[] parameters)
+    {
+        List<Dictionary<string, object>> results = new List<Dictionary<string, object>>();
+
+        using (var connection = new MySqlConnection("server=210.210.210.50;user=test_user;password=test*123;port=2020;database=pc_student"))
+        {
+            await connection.OpenAsync();
+
+            using (var command = new MySqlCommand(query, connection))
+            {
+                if (parameters != null)
+                {
+                    command.Parameters.AddRange(parameters);
+                }
+
+                using (var reader = await command.ExecuteReaderAsync())
+                {
+                    while (await reader.ReadAsync())
+                    {
+                        Dictionary<string, object> row = new Dictionary<string, object>();
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            row[reader.GetName(i)] = reader.GetValue(i);
+                        }
+                        results.Add(row);
+                    }
+                }
+            }
+        }
+        return results;
+    }
+
+
      
 }
