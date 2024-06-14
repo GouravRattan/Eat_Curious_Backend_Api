@@ -18,22 +18,46 @@ namespace MyCommonStructure.Services
 
             try
             {
+                string product_id = req.addInfo["product_id"].ToString();
+
+            MySqlParameter[] myParams = new MySqlParameter[] {
+            new MySqlParameter("@product_id", product_id)
+        };
                 // Query to fetch product data from the database
-                string query = "SELECT * FROM pc_student.et_products;";
+                var query = $"SELECT * FROM pc_student.et_products WHERE product_id = @product_id;";
 
                 // Execute the query using the dbServices instance
-                var productData = await ds.ExecuteSQLAsync(query, null);
+                var data =  ds.ExecuteSQLName(query, myParams);
 
                 // Set response data
-                resData.rStatus = 200;
-                resData.rData["products"] = productData;
+                if (data == null || data[0].Count() == 0)
+                {
+                    resData.rData["rCode"] = 1;
+                    resData.rData["rMessage"] = "Product Not Found...";
+                }
+                else
+                {
+
+                    var product = data[0][0];
+                    resData.rData["product_id"] = product["product_id"];
+                    resData.rData["product_name"] = product["product_name"];
+                    resData.rData["description"] = product["description"];
+                    resData.rData["price"] = product["price"];
+                    resData.rData["image"] = product["image"];
+                    resData.rData["rating"] = product["rating"];
+
+                    
+                    resData.rData["rCode"] = 0;
+                    resData.rData["rMessage"] = "Product found";
+                    
+                }
+
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                resData.rStatus = 500;
                 resData.rData["rCode"] = 1;
-                resData.rData["rMessage"] = "Error occurred while fetching product data: " + ex.Message;
+                resData.rData["rMessage"] = ex.Message;
+
             }
             return resData;
         }
