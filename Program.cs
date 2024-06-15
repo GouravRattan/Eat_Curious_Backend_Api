@@ -15,6 +15,7 @@ ConfigureServices(s =>
     s.AddSingleton<forgotPassword>();
     s.AddSingleton<deleteProfile>();
     s.AddSingleton<getProductData>();
+    s.AddSingleton<contactUs>();
 
     s.AddAuthorization();
     s.AddControllers();
@@ -88,6 +89,15 @@ ConfigureServices(s =>
              var body = await new StreamReader(http.Request.Body).ReadToEndAsync();
             requestData rData = JsonSerializer.Deserialize<requestData>(body);
             if (rData.eventID == "1004") await http.Response.WriteAsJsonAsync(await getProductData.GetProductData(rData));
+        });
+
+
+        var contactUs = e.ServiceProvider.GetRequiredService<contactUs>();
+        e.MapPost("contactUs", [AllowAnonymous] async (HttpContext http) =>
+        {
+             var body = await new StreamReader(http.Request.Body).ReadToEndAsync();
+            requestData rData = JsonSerializer.Deserialize<requestData>(body);
+            if (rData.eventID == "1003") await http.Response.WriteAsJsonAsync(await contactUs.ContactUs(rData));
         });
 
 
