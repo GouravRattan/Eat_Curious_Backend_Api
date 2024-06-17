@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "F:\\chrome download\\Eat_Curious_Backend_Api-main\\MyCommonStructure.csproj": {}
   },
   "projects": {
@@ -15,11 +16,32 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "C:\\Users\\gourav.rattan\\Desktop\\MyCommonStructure\\MyCommonStructure.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\gourav.rattan\\Desktop\\MyCommonStructure\\MyCommonStructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gourav.rattan\\Desktop\\MyCommonStructure\\MyCommonStructure.csproj",
+        "projectName": "MyCommonStructure",
+        "projectPath": "C:\\Users\\gourav.rattan\\Desktop\\MyCommonStructure\\MyCommonStructure.csproj",
+        "packagesPath": "C:\\Users\\gourav.rattan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gourav.rattan\\Desktop\\MyCommonStructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gourav.rattan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> af050699d26dc41c5345d47111495612def26342
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+<<<<<<< HEAD
+=======
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+>>>>>>> af050699d26dc41c5345d47111495612def26342
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,19 +54,38 @@
           "warnAsError": [
             "NU1605"
           ]
+<<<<<<< HEAD
+=======
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+>>>>>>> af050699d26dc41c5345d47111495612def26342
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+<<<<<<< HEAD
+=======
+            "BouncyCastle": {
+              "target": "Package",
+              "version": "[1.8.9, )"
+            },
+>>>>>>> af050699d26dc41c5345d47111495612def26342
             "IdentityServer4": {
               "target": "Package",
               "version": "[4.1.1, )"
             },
             "MYSQL.DATA": {
               "target": "Package",
+<<<<<<< HEAD
               "version": "[8.4.0, )"
+=======
+              "version": "[8.0.27, )"
+>>>>>>> af050699d26dc41c5345d47111495612def26342
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -52,7 +93,11 @@
             },
             "System.Text.Json": {
               "target": "Package",
+<<<<<<< HEAD
               "version": "[7.0.1, )"
+=======
+              "version": "[5.0.2, )"
+>>>>>>> af050699d26dc41c5345d47111495612def26342
             }
           },
           "imports": [
@@ -66,6 +111,27 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+<<<<<<< HEAD
+=======
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            }
+          ],
+>>>>>>> af050699d26dc41c5345d47111495612def26342
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -74,7 +140,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.423\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+>>>>>>> af050699d26dc41c5345d47111495612def26342
         }
       }
     }

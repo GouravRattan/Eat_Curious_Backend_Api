@@ -2,28 +2,63 @@
   "version": 3,
   "targets": {
     "net6.0": {
+<<<<<<< HEAD
       "BouncyCastle.Cryptography/2.2.1": {
         "type": "package",
         "compile": {
           "lib/net6.0/BouncyCastle.Cryptography.dll": {
+=======
+      "BouncyCastle/1.8.9": {
+        "type": "package",
+        "compile": {
+          "lib/BouncyCastle.Crypto.dll": {}
+        },
+        "runtime": {
+          "lib/BouncyCastle.Crypto.dll": {}
+        }
+      },
+      "BouncyCastle.NetCore/1.8.5": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+>>>>>>> af050699d26dc41c5345d47111495612def26342
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
           "lib/net6.0/BouncyCastle.Cryptography.dll": {
+=======
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+>>>>>>> af050699d26dc41c5345d47111495612def26342
             "related": ".xml"
           }
         }
       },
+<<<<<<< HEAD
       "Google.Protobuf/3.25.1": {
         "type": "package",
         "compile": {
           "lib/net5.0/Google.Protobuf.dll": {
+=======
+      "Google.Protobuf/3.14.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Protobuf.dll": {
+>>>>>>> af050699d26dc41c5345d47111495612def26342
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
           "lib/net5.0/Google.Protobuf.dll": {
+=======
+          "lib/netstandard2.0/Google.Protobuf.dll": {
+>>>>>>> af050699d26dc41c5345d47111495612def26342
             "related": ".pdb;.xml"
           }
         }
@@ -84,6 +119,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "K4os.Compression.LZ4/1.3.5": {
         "type": "package",
         "compile": {
@@ -106,24 +142,68 @@
         },
         "compile": {
           "lib/net6.0/K4os.Compression.LZ4.Streams.dll": {
+=======
+      "K4os.Compression.LZ4/1.2.6": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/K4os.Compression.LZ4.dll": {
+>>>>>>> af050699d26dc41c5345d47111495612def26342
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
           "lib/net6.0/K4os.Compression.LZ4.Streams.dll": {
+=======
+          "lib/netstandard2.0/K4os.Compression.LZ4.dll": {
+>>>>>>> af050699d26dc41c5345d47111495612def26342
             "related": ".xml"
           }
         }
       },
+<<<<<<< HEAD
       "K4os.Hash.xxHash/1.0.8": {
         "type": "package",
         "compile": {
           "lib/net6.0/K4os.Hash.xxHash.dll": {
+=======
+      "K4os.Compression.LZ4.Streams/1.2.6": {
+        "type": "package",
+        "dependencies": {
+          "K4os.Compression.LZ4": "1.2.6",
+          "K4os.Hash.xxHash": "1.0.6"
+        },
+        "compile": {
+          "lib/netstandard2.1/K4os.Compression.LZ4.Streams.dll": {
+>>>>>>> af050699d26dc41c5345d47111495612def26342
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
           "lib/net6.0/K4os.Hash.xxHash.dll": {
+=======
+          "lib/netstandard2.1/K4os.Compression.LZ4.Streams.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "K4os.Hash.xxHash/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/K4os.Hash.xxHash.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/K4os.Hash.xxHash.dll": {
+>>>>>>> af050699d26dc41c5345d47111495612def26342
             "related": ".xml"
           }
         }
@@ -258,6 +338,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.NETCore.Targets/1.1.0": {
         "type": "package",
         "compile": {
@@ -267,6 +348,8 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+=======
+>>>>>>> af050699d26dc41c5345d47111495612def26342
       "Microsoft.Win32.SystemEvents/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -289,6 +372,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "MySql.Data/8.4.0": {
         "type": "package",
         "dependencies": {
@@ -337,6 +421,33 @@
             "assetType": "native",
             "rid": "win-x64"
           }
+=======
+      "MySql.Data/8.0.27": {
+        "type": "package",
+        "dependencies": {
+          "BouncyCastle.NetCore": "1.8.5",
+          "Google.Protobuf": "3.14.0",
+          "K4os.Compression.LZ4.Streams": "1.2.6",
+          "System.Buffers": "4.5.1",
+          "System.Configuration.ConfigurationManager": "4.4.1",
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0",
+          "System.Security.Permissions": "4.7.0",
+          "System.Text.Encoding.CodePages": "4.4.0"
+        },
+        "compile": {
+          "lib/net5.0/MySql.Data.dll": {
+            "related": ".xml"
+          },
+          "lib/net5.0/Ubiety.Dns.Core.dll": {},
+          "lib/net5.0/ZstdNet.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/MySql.Data.dll": {
+            "related": ".xml"
+          },
+          "lib/net5.0/Ubiety.Dns.Core.dll": {},
+          "lib/net5.0/ZstdNet.dll": {}
+>>>>>>> af050699d26dc41c5345d47111495612def26342
         }
       },
       "Newtonsoft.Json/12.0.2": {
@@ -375,6 +486,7 @@
           "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
         }
       },
+<<<<<<< HEAD
       "System.Diagnostics.DiagnosticSource/7.0.2": {
         "type": "package",
         "dependencies": {
@@ -394,6 +506,8 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+=======
+>>>>>>> af050699d26dc41c5345d47111495612def26342
       "System.Drawing.Common/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -437,6 +551,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "System.IO/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -456,10 +571,26 @@
         "type": "package",
         "compile": {
           "lib/net6.0/System.IO.Pipelines.dll": {
+=======
+      "System.Memory/4.5.4": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll": {
+>>>>>>> af050699d26dc41c5345d47111495612def26342
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
           "lib/net6.0/System.IO.Pipelines.dll": {
             "related": ".xml"
           }
@@ -538,6 +669,11 @@
         },
         "runtime": {
           "lib/netstandard1.5/System.Runtime.Loader.dll": {}
+=======
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+>>>>>>> af050699d26dc41c5345d47111495612def26342
         }
       },
       "System.Security.AccessControl/4.7.0": {
@@ -637,6 +773,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "System.Text.Encoding/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -650,6 +787,8 @@
           }
         }
       },
+=======
+>>>>>>> af050699d26dc41c5345d47111495612def26342
       "System.Text.Encoding.CodePages/4.4.0": {
         "type": "package",
         "dependencies": {
@@ -670,6 +809,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "System.Text.Encodings.Web/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -677,10 +817,17 @@
         },
         "compile": {
           "lib/net6.0/System.Text.Encodings.Web.dll": {
+=======
+      "System.Text.Encodings.Web/4.7.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/System.Text.Encodings.Web.dll": {
+>>>>>>> af050699d26dc41c5345d47111495612def26342
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
           "lib/net6.0/System.Text.Encodings.Web.dll": {
             "related": ".xml"
           }
@@ -703,10 +850,22 @@
         },
         "compile": {
           "lib/net6.0/System.Text.Json.dll": {
+=======
+          "lib/netstandard2.1/System.Text.Encodings.Web.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Text.Json/5.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {
+>>>>>>> af050699d26dc41c5345d47111495612def26342
             "related": ".xml"
           }
         },
         "runtime": {
+<<<<<<< HEAD
           "lib/net6.0/System.Text.Json.dll": {
             "related": ".xml"
           }
@@ -735,6 +894,11 @@
         },
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
+=======
+          "lib/netcoreapp3.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+>>>>>>> af050699d26dc41c5345d47111495612def26342
         }
       },
       "System.Windows.Extensions/4.7.0": {
@@ -758,6 +922,7 @@
             "rid": "win"
           }
         }
+<<<<<<< HEAD
       },
       "ZstdSharp.Port/0.7.1": {
         "type": "package",
@@ -767,10 +932,13 @@
         "runtime": {
           "lib/net6.0/ZstdSharp.dll": {}
         }
+=======
+>>>>>>> af050699d26dc41c5345d47111495612def26342
       }
     }
   },
   "libraries": {
+<<<<<<< HEAD
     "BouncyCastle.Cryptography/2.2.1": {
       "sha512": "A6Zr52zVqJKt18ZBsTnX0qhG0kwIQftVAjLmszmkiR/trSp8H+xj1gUOzk7XHwaKgyREMSV1v9XaKrBUeIOdvQ==",
       "type": "package",
@@ -799,13 +967,64 @@
         ".nupkg.metadata",
         ".signature.p7s",
         "google.protobuf.3.25.1.nupkg.sha512",
+=======
+    "BouncyCastle/1.8.9": {
+      "sha512": "axnBgvdD5n+FnEG6efk/tfKuMFru7R/EoISH9zjh319yb3HD24TEHSAbNN/lTRT2ulOGRxDgOsCjkuk08iwWPg==",
+      "type": "package",
+      "path": "bouncycastle/1.8.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "bouncycastle.1.8.9.nupkg.sha512",
+        "bouncycastle.nuspec",
+        "lib/BouncyCastle.Crypto.dll"
+      ]
+    },
+    "BouncyCastle.NetCore/1.8.5": {
+      "sha512": "6uxsQw2UXrt82VQAWC2td3oBSJjUZ3P4u4DliagB8wf67KsU53V8sW9xwdF+IwZOOZFR0TCZuv/YKZ2BlrfAag==",
+      "type": "package",
+      "path": "bouncycastle.netcore/1.8.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bouncycastle.netcore.1.8.5.nupkg.sha512",
+        "bouncycastle.netcore.nuspec",
+        "lib/Mono/BouncyCastle.Crypto.dll",
+        "lib/Mono/BouncyCastle.Crypto.xml",
+        "lib/MonoAndroid/BouncyCastle.Crypto.dll",
+        "lib/MonoAndroid/BouncyCastle.Crypto.xml",
+        "lib/MonoMac/BouncyCastle.Crypto.dll",
+        "lib/MonoMac/BouncyCastle.Crypto.xml",
+        "lib/MonoTouch/BouncyCastle.Crypto.dll",
+        "lib/MonoTouch/BouncyCastle.Crypto.xml",
+        "lib/net20/BouncyCastle.Crypto.dll",
+        "lib/net20/BouncyCastle.Crypto.xml",
+        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
+        "lib/xamarinios/BouncyCastle.Crypto.dll",
+        "lib/xamarinios/BouncyCastle.Crypto.xml"
+      ]
+    },
+    "Google.Protobuf/3.14.0": {
+      "sha512": "9AkodyGNmLI+wJJPbwpWLmh4BMHoXDQ9+8qvDPhQQi/BNsleqKMBn3OlyLwC6CALwan2kc5+Cenb8fJSITX3nQ==",
+      "type": "package",
+      "path": "google.protobuf/3.14.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "google.protobuf.3.14.0.nupkg.sha512",
+>>>>>>> af050699d26dc41c5345d47111495612def26342
         "google.protobuf.nuspec",
         "lib/net45/Google.Protobuf.dll",
         "lib/net45/Google.Protobuf.pdb",
         "lib/net45/Google.Protobuf.xml",
+<<<<<<< HEAD
         "lib/net5.0/Google.Protobuf.dll",
         "lib/net5.0/Google.Protobuf.pdb",
         "lib/net5.0/Google.Protobuf.xml",
+=======
+>>>>>>> af050699d26dc41c5345d47111495612def26342
         "lib/netstandard1.1/Google.Protobuf.dll",
         "lib/netstandard1.1/Google.Protobuf.pdb",
         "lib/netstandard1.1/Google.Protobuf.xml",
@@ -865,6 +1084,7 @@
         "lib/netstandard2.0/IdentityServer4.Storage.xml"
       ]
     },
+<<<<<<< HEAD
     "K4os.Compression.LZ4/1.3.5": {
       "sha512": "TS4mqlT0X1OlnvOGNfl02QdVUhuqgWuCnn7UxupIa7C9Pb6qlQ5yZA2sPhRh0OSmVULaQU64KV4wJuu//UyVQQ==",
       "type": "package",
@@ -901,12 +1121,49 @@
         "lib/net5.0/K4os.Compression.LZ4.Streams.xml",
         "lib/net6.0/K4os.Compression.LZ4.Streams.dll",
         "lib/net6.0/K4os.Compression.LZ4.Streams.xml",
+=======
+    "K4os.Compression.LZ4/1.2.6": {
+      "sha512": "4EN8EE6bZG2U8dFfeqn+Om3UNajK3cPYHvyQROCFm4jNFVLuRB7Nl5bDkjBSAjfctS6konm+ay3u5RafBzltDA==",
+      "type": "package",
+      "path": "k4os.compression.lz4/1.2.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "k4os.compression.lz4.1.2.6.nupkg.sha512",
+        "k4os.compression.lz4.nuspec",
+        "lib/net45/K4os.Compression.LZ4.dll",
+        "lib/net45/K4os.Compression.LZ4.xml",
+        "lib/net46/K4os.Compression.LZ4.dll",
+        "lib/net46/K4os.Compression.LZ4.xml",
+        "lib/netstandard1.6/K4os.Compression.LZ4.dll",
+        "lib/netstandard1.6/K4os.Compression.LZ4.xml",
+        "lib/netstandard2.0/K4os.Compression.LZ4.dll",
+        "lib/netstandard2.0/K4os.Compression.LZ4.xml"
+      ]
+    },
+    "K4os.Compression.LZ4.Streams/1.2.6": {
+      "sha512": "5KMcNFRHeRrnJ9c8k5fZcfAJJEY0FndMiDiHIYa35Mx5KCMkeSNo/PEXu7YmtCoVczJagx+Vt7J/F+//S1PcJQ==",
+      "type": "package",
+      "path": "k4os.compression.lz4.streams/1.2.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "k4os.compression.lz4.streams.1.2.6.nupkg.sha512",
+        "k4os.compression.lz4.streams.nuspec",
+        "lib/net45/K4os.Compression.LZ4.Streams.dll",
+        "lib/net45/K4os.Compression.LZ4.Streams.xml",
+        "lib/net46/K4os.Compression.LZ4.Streams.dll",
+        "lib/net46/K4os.Compression.LZ4.Streams.xml",
+        "lib/netstandard1.6/K4os.Compression.LZ4.Streams.dll",
+        "lib/netstandard1.6/K4os.Compression.LZ4.Streams.xml",
+>>>>>>> af050699d26dc41c5345d47111495612def26342
         "lib/netstandard2.0/K4os.Compression.LZ4.Streams.dll",
         "lib/netstandard2.0/K4os.Compression.LZ4.Streams.xml",
         "lib/netstandard2.1/K4os.Compression.LZ4.Streams.dll",
         "lib/netstandard2.1/K4os.Compression.LZ4.Streams.xml"
       ]
     },
+<<<<<<< HEAD
     "K4os.Hash.xxHash/1.0.8": {
       "sha512": "Wp2F7BamQ2Q/7Hk834nV9vRQapgcr8kgv9Jvfm8J3D0IhDqZMMl+a2yxUq5ltJitvXvQfB8W6K4F4fCbw/P6YQ==",
       "type": "package",
@@ -926,6 +1183,25 @@
         "lib/netstandard2.0/K4os.Hash.xxHash.xml",
         "lib/netstandard2.1/K4os.Hash.xxHash.dll",
         "lib/netstandard2.1/K4os.Hash.xxHash.xml"
+=======
+    "K4os.Hash.xxHash/1.0.6": {
+      "sha512": "jCfNP0inx1sGcP3KSbpiDEH3km2e1sVBjMfKo+V92jr1dL4ZYgA1uhRMl1wAtdGZcbObXIikKqtVlgx3j/CW6g==",
+      "type": "package",
+      "path": "k4os.hash.xxhash/1.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "k4os.hash.xxhash.1.0.6.nupkg.sha512",
+        "k4os.hash.xxhash.nuspec",
+        "lib/net45/K4os.Hash.xxHash.dll",
+        "lib/net45/K4os.Hash.xxHash.xml",
+        "lib/net46/K4os.Hash.xxHash.dll",
+        "lib/net46/K4os.Hash.xxHash.xml",
+        "lib/netstandard1.6/K4os.Hash.xxHash.dll",
+        "lib/netstandard1.6/K4os.Hash.xxHash.xml",
+        "lib/netstandard2.0/K4os.Hash.xxHash.dll",
+        "lib/netstandard2.0/K4os.Hash.xxHash.xml"
+>>>>>>> af050699d26dc41c5345d47111495612def26342
       ]
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.9": {
@@ -1079,6 +1355,7 @@
         "version.txt"
       ]
     },
+<<<<<<< HEAD
     "Microsoft.NETCore.Targets/1.1.0": {
       "sha512": "aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "type": "package",
@@ -1094,6 +1371,8 @@
         "runtime.json"
       ]
     },
+=======
+>>>>>>> af050699d26dc41c5345d47111495612def26342
     "Microsoft.Win32.SystemEvents/4.7.0": {
       "sha512": "mtVirZr++rq+XCDITMUdnETD59XoeMxSpLRIII7JRI6Yj0LEDiO1pPn0ktlnIj12Ix8bfvQqQDMMIF9wC98oCA==",
       "type": "package",
@@ -1123,6 +1402,7 @@
         "version.txt"
       ]
     },
+<<<<<<< HEAD
     "MySql.Data/8.4.0": {
       "sha512": "NA273x7ybutfGwGbF2cd8rLVM5t7AkZCzRHr/+tGms1FeMlfl+LgfjHXcb5qN1QxFpeNQQKZ+vqZw8v/S8gUiA==",
       "type": "package",
@@ -1153,6 +1433,37 @@
         "runtimes/win-x64/native/k5sprt64.dll",
         "runtimes/win-x64/native/krb5_64.dll",
         "runtimes/win-x64/native/krbcc64.dll"
+=======
+    "MySql.Data/8.0.27": {
+      "sha512": "Ef+sH12/nGAiF9yLZFkuXh7vtVvEPiLKyZNJiDk+VBULzLcXj0lmfU7qcmWNCSVX5n6zu5jMV+JaNf1C+a+T8g==",
+      "type": "package",
+      "path": "mysql.data/8.0.27",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/MySql.Data.dll",
+        "lib/net452/MySql.Data.xml",
+        "lib/net452/Ubiety.Dns.Core.dll",
+        "lib/net452/ZstdNet.dll",
+        "lib/net48/MySql.Data.dll",
+        "lib/net48/MySql.Data.xml",
+        "lib/net48/Ubiety.Dns.Core.dll",
+        "lib/net48/ZstdNet.dll",
+        "lib/net5.0/MySql.Data.dll",
+        "lib/net5.0/MySql.Data.xml",
+        "lib/net5.0/Ubiety.Dns.Core.dll",
+        "lib/net5.0/ZstdNet.dll",
+        "lib/netstandard2.0/MySql.Data.dll",
+        "lib/netstandard2.0/MySql.Data.xml",
+        "lib/netstandard2.0/Ubiety.Dns.Core.dll",
+        "lib/netstandard2.0/ZstdNet.dll",
+        "lib/netstandard2.1/MySql.Data.dll",
+        "lib/netstandard2.1/MySql.Data.xml",
+        "lib/netstandard2.1/Ubiety.Dns.Core.dll",
+        "lib/netstandard2.1/ZstdNet.dll",
+        "mysql.data.8.0.27.nupkg.sha512",
+        "mysql.data.nuspec"
+>>>>>>> af050699d26dc41c5345d47111495612def26342
       ]
     },
     "Newtonsoft.Json/12.0.2": {
@@ -1237,6 +1548,7 @@
         "version.txt"
       ]
     },
+<<<<<<< HEAD
     "System.Diagnostics.DiagnosticSource/7.0.2": {
       "sha512": "hYr3I9N9811e0Bjf2WNwAGGyTuAFbbTgX1RPLt/3Wbm68x3IGcX5Cl75CMmgT6WlNwLQ2tCCWfqYPpypjaf2xA==",
       "type": "package",
@@ -1264,6 +1576,8 @@
         "useSharedDesignerContext.txt"
       ]
     },
+=======
+>>>>>>> af050699d26dc41c5345d47111495612def26342
     "System.Drawing.Common/4.7.0": {
       "sha512": "v+XbyYHaZjDfn0ENmJEV1VYLgGgCTx1gnfOBcppowbpOAriglYgGCvFCPr2EEZyBvXlpxbEsTwkOlInl107ahA==",
       "type": "package",
@@ -1324,6 +1638,7 @@
         "system.identitymodel.tokens.jwt.nuspec"
       ]
     },
+<<<<<<< HEAD
     "System.IO/4.3.0": {
       "sha512": "3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
       "type": "package",
@@ -1409,12 +1724,42 @@
       "sha512": "ryTgF+iFkpGZY1vRQhfCzX0xTdlV3pyaTTqRu2ETbEv+HlV7O6y7hyQURnghNIXvctl5DuZ//Dpks6HdL/Txgw==",
       "type": "package",
       "path": "system.io.pipelines/6.0.3",
+=======
+    "System.Memory/4.5.4": {
+      "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "type": "package",
+      "path": "system.memory/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Memory.dll",
+        "lib/net461/System.Memory.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.4.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/5.0.0": {
+      "sha512": "ZD9TMpsmYJLrxbbmdvhwt9YEgG5WntEnZ/d1eH8JBX9LBp+Ju8BSBhUGbZMNVHHomWo2KVImJhTDl2hIgw/6MA==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/5.0.0",
+>>>>>>> af050699d26dc41c5345d47111495612def26342
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+<<<<<<< HEAD
         "buildTransitive/netcoreapp2.0/System.IO.Pipelines.targets",
         "buildTransitive/netcoreapp3.1/_._",
         "lib/net461/System.IO.Pipelines.dll",
@@ -1715,6 +2060,28 @@
         "ref/netstandard1.5/zh-hant/System.Runtime.Loader.xml",
         "system.runtime.loader.4.3.0.nupkg.sha512",
         "system.runtime.loader.nuspec"
+=======
+        "lib/net45/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net45/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+>>>>>>> af050699d26dc41c5345d47111495612def26342
       ]
     },
     "System.Security.AccessControl/4.7.0": {
@@ -1948,6 +2315,7 @@
         "version.txt"
       ]
     },
+<<<<<<< HEAD
     "System.Text.Encoding/4.3.0": {
       "sha512": "BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
       "type": "package",
@@ -2016,6 +2384,8 @@
         "system.text.encoding.nuspec"
       ]
     },
+=======
+>>>>>>> af050699d26dc41c5345d47111495612def26342
     "System.Text.Encoding.CodePages/4.4.0": {
       "sha512": "6JX7ZdaceBiLKLkYt8zJcp4xTJd1uYyXXEkPw6mnlUIjh1gZPIVKPtRXPmY5kLf6DwZmf5YLwR3QUrRonl7l0A==",
       "type": "package",
@@ -2064,6 +2434,7 @@
         "version.txt"
       ]
     },
+<<<<<<< HEAD
     "System.Text.Encodings.Web/7.0.0": {
       "sha512": "OP6umVGxc0Z0MvZQBVigj4/U31Pw72ITihDWP9WiWDm+q5aoe0GaJivsfYGq53o6dxH7DcXWiCTl7+0o2CGdmg==",
       "type": "package",
@@ -2099,11 +2470,39 @@
       "sha512": "OtDEmCCiNl8JAduFKZ/r0Sw6XZNHwIicUYy/mXgMDGeOsZLshH37qi3oPRzFYiryVktiMoQLByMGPtRCEMYbeQ==",
       "type": "package",
       "path": "system.text.json/7.0.1",
+=======
+    "System.Text.Encodings.Web/4.7.0": {
+      "sha512": "IJanJWPQvya2sbGStt3Fkdy4IaomUBSadAfYWeJDQw0zclMk9ixSvMeei6cSmTTQ6ZkGIIAbhHZVCoLR7GgX7Q==",
+      "type": "package",
+      "path": "system.text.encodings.web/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard1.0/System.Text.Encodings.Web.xml",
+        "lib/netstandard2.0/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.0/System.Text.Encodings.Web.xml",
+        "lib/netstandard2.1/System.Text.Encodings.Web.dll",
+        "lib/netstandard2.1/System.Text.Encodings.Web.xml",
+        "system.text.encodings.web.4.7.0.nupkg.sha512",
+        "system.text.encodings.web.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Text.Json/5.0.2": {
+      "sha512": "I47dVIGiV6SfAyppphxqupertT/5oZkYLDCX6vC3HpOI4ZLjyoKAreUoem2ie6G0RbRuFrlqz/PcTQjfb2DOfQ==",
+      "type": "package",
+      "path": "system.text.json/5.0.2",
+>>>>>>> af050699d26dc41c5345d47111495612def26342
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
+<<<<<<< HEAD
         "README.md",
         "THIRD-PARTY-NOTICES.TXT",
         "analyzers/dotnet/roslyn3.11/cs/System.Text.Json.SourceGeneration.dll",
@@ -2267,6 +2666,17 @@
         "ref/xamarinwatchos10/_._",
         "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
         "system.threading.tasks.extensions.nuspec",
+=======
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Text.Json.dll",
+        "lib/net461/System.Text.Json.xml",
+        "lib/netcoreapp3.0/System.Text.Json.dll",
+        "lib/netcoreapp3.0/System.Text.Json.xml",
+        "lib/netstandard2.0/System.Text.Json.dll",
+        "lib/netstandard2.0/System.Text.Json.xml",
+        "system.text.json.5.0.2.nupkg.sha512",
+        "system.text.json.nuspec",
+>>>>>>> af050699d26dc41c5345d47111495612def26342
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -2291,6 +2701,7 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+<<<<<<< HEAD
     },
     "ZstdSharp.Port/0.7.1": {
       "sha512": "Idgg+mJEyAujqDPzA3APy9dNoyw0YQcNA65GgYjktDRtJ+nvx/hv+J+m6Eax3JJMGEYGy04oc5YNP6ZvQ3Y1vQ==",
@@ -2309,10 +2720,13 @@
         "zstdsharp.port.0.7.1.nupkg.sha512",
         "zstdsharp.port.nuspec"
       ]
+=======
+>>>>>>> af050699d26dc41c5345d47111495612def26342
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+<<<<<<< HEAD
       "IdentityServer4 >= 4.1.1",
       "MYSQL.DATA >= 8.4.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.9",
@@ -2321,10 +2735,22 @@
   },
   "packageFolders": {
     "C:\\Users\\hp\\.nuget\\packages\\": {}
+=======
+      "BouncyCastle >= 1.8.9",
+      "IdentityServer4 >= 4.1.1",
+      "MYSQL.DATA >= 8.0.27",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.9",
+      "System.Text.Json >= 5.0.2"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\gourav.rattan\\.nuget\\packages\\": {}
+>>>>>>> af050699d26dc41c5345d47111495612def26342
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "F:\\chrome download\\Eat_Curious_Backend_Api-main\\MyCommonStructure.csproj",
       "projectName": "MyCommonStructure",
       "projectPath": "F:\\chrome download\\Eat_Curious_Backend_Api-main\\MyCommonStructure.csproj",
@@ -2333,11 +2759,26 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+      "projectUniqueName": "C:\\Users\\gourav.rattan\\Desktop\\MyCommonStructure\\MyCommonStructure.csproj",
+      "projectName": "MyCommonStructure",
+      "projectPath": "C:\\Users\\gourav.rattan\\Desktop\\MyCommonStructure\\MyCommonStructure.csproj",
+      "packagesPath": "C:\\Users\\gourav.rattan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gourav.rattan\\Desktop\\MyCommonStructure\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\gourav.rattan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> af050699d26dc41c5345d47111495612def26342
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+<<<<<<< HEAD
+=======
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+>>>>>>> af050699d26dc41c5345d47111495612def26342
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2350,19 +2791,38 @@
         "warnAsError": [
           "NU1605"
         ]
+<<<<<<< HEAD
+=======
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+>>>>>>> af050699d26dc41c5345d47111495612def26342
       }
     },
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+<<<<<<< HEAD
+=======
+          "BouncyCastle": {
+            "target": "Package",
+            "version": "[1.8.9, )"
+          },
+>>>>>>> af050699d26dc41c5345d47111495612def26342
           "IdentityServer4": {
             "target": "Package",
             "version": "[4.1.1, )"
           },
           "MYSQL.DATA": {
             "target": "Package",
+<<<<<<< HEAD
             "version": "[8.4.0, )"
+=======
+            "version": "[8.0.27, )"
+>>>>>>> af050699d26dc41c5345d47111495612def26342
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
@@ -2370,7 +2830,11 @@
           },
           "System.Text.Json": {
             "target": "Package",
+<<<<<<< HEAD
             "version": "[7.0.1, )"
+=======
+            "version": "[5.0.2, )"
+>>>>>>> af050699d26dc41c5345d47111495612def26342
           }
         },
         "imports": [
@@ -2384,6 +2848,27 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+<<<<<<< HEAD
+=======
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.29, 6.0.29]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.29, 6.0.29]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.29, 6.0.29]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.29, 6.0.29]"
+          }
+        ],
+>>>>>>> af050699d26dc41c5345d47111495612def26342
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -2392,8 +2877,67 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.423\\RuntimeIdentifierGraph.json"
       }
     }
   }
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BouncyCastle' 1.8.9 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-8xfc-gm6g-vgpv",
+      "libraryId": "BouncyCastle",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BouncyCastle' 1.8.9 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-m44j-cfrm-g8qc",
+      "libraryId": "BouncyCastle",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BouncyCastle' 1.8.9 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-v435-xc8x-wvr9",
+      "libraryId": "BouncyCastle",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1902",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNetCore.Authentication.JwtBearer' 3.1.9 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-q7cg-43mg-qp69",
+      "libraryId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'BouncyCastle 1.8.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "BouncyCastle",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+>>>>>>> af050699d26dc41c5345d47111495612def26342
 }

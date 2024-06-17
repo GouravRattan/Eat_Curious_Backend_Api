@@ -36,7 +36,11 @@ namespace MyCommonStructure
             new MySqlParameter("@NewPassword", newPassword)
         };
 
+<<<<<<< HEAD
                 var sq = $"UPDATE GData.et_register SET password = @NewPassword WHERE phone = @UserId";
+=======
+                var sq = $"UPDATE pc_student.et_register SET password = @NewPassword WHERE phone = @UserId";
+>>>>>>> af050699d26dc41c5345d47111495612def26342
                 var affectedRows = ds.ExecuteSQLName(sq, myParams);
 
                 // Check if any rows were affected
@@ -57,6 +61,10 @@ namespace MyCommonStructure
                 resData.rStatus = 199;
                 resData.rData["rMessage"] = "REMOVE THIS ERROR IN PRODUCTION !!!  " + ex.Message.ToString();
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> af050699d26dc41c5345d47111495612def26342
             return resData;
         }
     }

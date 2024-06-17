@@ -29,7 +29,11 @@ namespace MyCommonStructure.Services
 
         };
 
+<<<<<<< HEAD
                 var checkSql = $"SELECT * FROM GData.et_register WHERE phone=@phone OR email=@email;";
+=======
+                var checkSql = $"SELECT * FROM pc_student.et_register WHERE phone=@phone OR email=@email;";
+>>>>>>> af050699d26dc41c5345d47111495612def26342
                 var checkResult = ds.executeSQL(checkSql, para);
 
 
@@ -40,7 +44,11 @@ namespace MyCommonStructure.Services
                 }
                 else
                 {
+<<<<<<< HEAD
                     var insertSql = $"INSERT INTO GData.et_register( name, phone, email, password) VALUES(@name, @phone, @email, @password);";
+=======
+                    var insertSql = $"INSERT INTO pc_student.et_register( name, phone, email, password) VALUES(@name, @phone, @email, @password);";
+>>>>>>> af050699d26dc41c5345d47111495612def26342
                     var insertId = ds.ExecuteInsertAndGetLastId(insertSql, para);
 
                     if (insertId != null)
@@ -48,12 +56,17 @@ namespace MyCommonStructure.Services
                         resData.eventID = req.eventID;
                         resData.rData["rMessage"] = "Registration Successfully";
                     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> af050699d26dc41c5345d47111495612def26342
                 }
             }
             catch (Exception ex)
             {
                 resData.rData["rCode"] = 1;
                 resData.rData["rMessage"] = $"Error: {ex.Message}";
+<<<<<<< HEAD
             }
             return resData;
         }
@@ -106,4 +119,15 @@ namespace MyCommonStructure.Services
 
     }
 
+=======
+
+            }
+
+            return resData;
+
+        }
+
+        
+    }
+>>>>>>> af050699d26dc41c5345d47111495612def26342
 }

@@ -57,6 +57,7 @@ C:\Users\gourav.rattan\Desktop\MyCommonStructure\obj\Debug\net6.0\MyCommonStruct
 C:\Users\gourav.rattan\Desktop\MyCommonStructure\obj\Debug\net6.0\MyCommonStructure.genruntimeconfig.cache
 C:\Users\gourav.rattan\Desktop\MyCommonStructure\obj\Debug\net6.0\ref\MyCommonStructure.dll
 C:\Users\gourav.rattan\Desktop\MyCommonStructure\obj\Debug\net6.0\MyCommonStructure.sourcelink.json
+<<<<<<< HEAD
 F:\chrome download\Eat_Curious_Backend_Api-main\bin\Debug\net6.0\appsettings.Development.json
 F:\chrome download\Eat_Curious_Backend_Api-main\bin\Debug\net6.0\appsettings.json
 F:\chrome download\Eat_Curious_Backend_Api-main\bin\Debug\net6.0\MyCommonStructure.exe
@@ -119,3 +120,5 @@ F:\chrome download\Eat_Curious_Backend_Api-main\bin\Debug\net6.0\runtimes\win-x6
 F:\chrome download\Eat_Curious_Backend_Api-main\bin\Debug\net6.0\runtimes\win-x64\native\krb5_64.dll
 F:\chrome download\Eat_Curious_Backend_Api-main\bin\Debug\net6.0\runtimes\win-x64\native\krbcc64.dll
 F:\chrome download\Eat_Curious_Backend_Api-main\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+=======
+>>>>>>> af050699d26dc41c5345d47111495612def26342

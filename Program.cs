@@ -47,8 +47,14 @@ ConfigureServices(s =>
             {
                 var body = await new StreamReader(http.Request.Body).ReadToEndAsync();
                 requestData rData = JsonSerializer.Deserialize<requestData>(body);
+<<<<<<< HEAD
                 if (rData.eventID == "1001") // update
                     await http.Response.WriteAsJsonAsync(await login.Login(rData));
+=======
+                if (rData.eventID == "1002") // update
+                    await http.Response.WriteAsJsonAsync(await login.Login(rData));
+
+>>>>>>> af050699d26dc41c5345d47111495612def26342
             });
 
 
@@ -58,6 +64,7 @@ ConfigureServices(s =>
         {
             var body = await new StreamReader(http.Request.Body).ReadToEndAsync();
             requestData rData = JsonSerializer.Deserialize<requestData>(body);
+<<<<<<< HEAD
             
             if (rData.eventID == "1002") // update
                 await http.Response.WriteAsJsonAsync(await register.Registration(rData));
@@ -67,12 +74,23 @@ ConfigureServices(s =>
 
         });
 
+=======
+            if (rData.eventID == "1006") // update
+                await http.Response.WriteAsJsonAsync(await register.Registration(rData));
+        });
+
+
+>>>>>>> af050699d26dc41c5345d47111495612def26342
         var forgotPassword = e.ServiceProvider.GetRequiredService<forgotPassword>();
         e.MapPost("forgotPassword", [AllowAnonymous] async (HttpContext http) =>
         {
             var body = await new StreamReader(http.Request.Body).ReadToEndAsync();
             requestData rData = JsonSerializer.Deserialize<requestData>(body);
+<<<<<<< HEAD
             if (rData.eventID == "1003") // forgot Password
+=======
+            if (rData.eventID == "1007") // forgot Password
+>>>>>>> af050699d26dc41c5345d47111495612def26342
                 await http.Response.WriteAsJsonAsync(await forgotPassword.ForgotPassword(rData));
         });
 
@@ -82,7 +100,11 @@ ConfigureServices(s =>
         {
             var body = await new StreamReader(http.Request.Body).ReadToEndAsync();
             requestData rData = JsonSerializer.Deserialize<requestData>(body);
+<<<<<<< HEAD
             if (rData.eventID == "1004") await http.Response.WriteAsJsonAsync(await deleteProfile.DeleteProfile(rData));
+=======
+            if (rData.eventID == "1009") await http.Response.WriteAsJsonAsync(await deleteProfile.DeleteProfile(rData));
+>>>>>>> af050699d26dc41c5345d47111495612def26342
         });
 
 
@@ -91,16 +113,26 @@ ConfigureServices(s =>
         {
              var body = await new StreamReader(http.Request.Body).ReadToEndAsync();
             requestData rData = JsonSerializer.Deserialize<requestData>(body);
+<<<<<<< HEAD
             if (rData.eventID == "1005") await http.Response.WriteAsJsonAsync(await getProductData.GetProductData(rData));
+=======
+            if (rData.eventID == "1004") await http.Response.WriteAsJsonAsync(await getProductData.GetProductData(rData));
+>>>>>>> af050699d26dc41c5345d47111495612def26342
         });
 
 
         var contactUs = e.ServiceProvider.GetRequiredService<contactUs>();
         e.MapPost("contactUs", [AllowAnonymous] async (HttpContext http) =>
         {
+<<<<<<< HEAD
              var body = await new StreamReader(http.Request.Body).ReadToEndAsync(); 
               requestData rData = JsonSerializer.Deserialize<requestData>(body);
             if (rData.eventID == "1006") await http.Response.WriteAsJsonAsync(await contactUs.ContactUs(rData));
+=======
+             var body = await new StreamReader(http.Request.Body).ReadToEndAsync();
+            requestData rData = JsonSerializer.Deserialize<requestData>(body);
+            if (rData.eventID == "1003") await http.Response.WriteAsJsonAsync(await contactUs.ContactUs(rData));
+>>>>>>> af050699d26dc41c5345d47111495612def26342
         });
 
 

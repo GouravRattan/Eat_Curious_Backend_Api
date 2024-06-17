@@ -28,7 +28,11 @@ namespace MyCommonStructure.Services
                     new MySqlParameter("@message", req.addInfo["message"].ToString()),
                 };
 
+<<<<<<< HEAD
                 var checkSql = $"SELECT * FROM GData.et_register WHERE Email=@Email;";
+=======
+                var checkSql = $"SELECT * FROM pc_student.et_register WHERE Email=@Email;";
+>>>>>>> af050699d26dc41c5345d47111495612def26342
                 var checkResult = ds.executeSQL(checkSql, para);
 
                 if (checkResult == null || checkResult[0].Count() == 0)
@@ -38,7 +42,11 @@ namespace MyCommonStructure.Services
                 }
                 else
                 {
+<<<<<<< HEAD
                     var insertSql = $"INSERT INTO GData.et_feedback (Name, Email, Phone, Interest, Message) VALUES(@name, @email, @phone, @interest, @message);";
+=======
+                    var insertSql = $"INSERT INTO pc_student.et_feedback (Name, Email, Phone, Interest, Message) VALUES(@name, @email, @phone, @interest, @message);";
+>>>>>>> af050699d26dc41c5345d47111495612def26342
                     var insertId = ds.ExecuteInsertAndGetLastId(insertSql, para);
 
                     if (insertId != 0)
