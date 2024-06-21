@@ -61,5 +61,65 @@ namespace MyCommonStructure.Services
             }
             return resData;
         }
+
+
+
+        // public async Task<responseData> GetAllProductData(requestData req)
+        // {
+        //     responseData resData = new responseData();
+        //     resData.eventID = req.eventID;
+
+        //     try
+        //     {
+        //         string product_id = req.addInfo["product_id"].ToString();
+
+        //     MySqlParameter[] myParams = new MySqlParameter[] {
+        //     new MySqlParameter("@product_id", product_id)
+        // };
+        //         // Query to fetch product data from the database
+        //         var query = $"SELECT * FROM pc_student.et_products WHERE product_id = @product_id;";
+
+        //         // Execute the query using the dbServices instance
+        //         var data =  ds.ExecuteSQLName(query, myParams);
+
+        //         // Set response data
+        //         if (data == null || data[0].Count() == 0)
+        //         {
+        //             resData.rData["rCode"] = 1;
+        //             resData.rData["rMessage"] = "Product Not Found...";
+        //         }
+        //         else
+        //         {
+        //     var products = new List<Dictionary<string, string>>();
+        //     foreach (var product in data)
+        //     {
+        //         var productData = new Dictionary<string, string>
+        //         {
+        //             { "product_id", product["product_id"].ToString() },
+        //             { "product_name", product["product_name"].ToString() },
+        //             { "description", product["description"].ToString() },
+        //             { "price", product["price"].ToString() },
+        //             { "image", product["image"].ToString() },
+        //             { "rating", product["rating"].ToString() }
+        //         };
+
+        //         products.Add(productData);
+        //     }
+
+        //     resData.rData["products"] = products;
+        //     resData.rData["rCode"] = 0;
+        //     resData.rData["rMessage"] = "Products found";
+        // }
+
+        //     }
+        //     catch (Exception ex)
+        //     {
+        //         resData.rData["rCode"] = 1;
+        //         resData.rData["rMessage"] = ex.Message;
+
+        //     }
+        //     return resData;
+        // }
+
     }
 }

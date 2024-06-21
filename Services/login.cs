@@ -60,11 +60,7 @@ namespace COMMON_PROJECT_STRUCTURE_API.services
                 new MySqlParameter("@roleId", 6),
                 new MySqlParameter("@Password", req.addInfo["Password"].ToString())
                 };
-<<<<<<< HEAD
-                var sq = $"SELECT * FROM GData.et_register WHERE {columnName} = @UserId AND password = @Password ";
-=======
                 var sq = $"SELECT * FROM pc_student.et_register WHERE {columnName} = @UserId AND password = @Password ";
->>>>>>> af050699d26dc41c5345d47111495612def26342
                 var data = ds.ExecuteSQLName(sq, myParams);
                 
                 if (data==null || data[0].Count()==0)
@@ -88,7 +84,6 @@ namespace COMMON_PROJECT_STRUCTURE_API.services
             }
             return resData;
         }
-<<<<<<< HEAD
 
         // Method to check if phone number exists in dependra_signup table
         // private bool CheckPhoneNumberExists(string phoneNumber)
@@ -113,8 +108,6 @@ namespace COMMON_PROJECT_STRUCTURE_API.services
         //     }
         // }
 
-=======
->>>>>>> af050699d26dc41c5345d47111495612def26342
           public static bool IsValidEmail(string email)
         {
             string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";

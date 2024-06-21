@@ -7,19 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
     <!-- <PackageReference Include="BouncyCastle" Version="1.8.9" /> -->
     <PackageReference Include="IdentityServer4" Version="4.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.9" />
     <PackageReference Include="MYSQL.DATA" Version="8.4.0" />
     <PackageReference Include="System.Text.Json" Version="7.0.1" />
-=======
-    <PackageReference Include="BouncyCastle" Version="1.8.9" />
-    <PackageReference Include="IdentityServer4" Version="4.1.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.9" />
-    <PackageReference Include="MYSQL.DATA" Version="8.0.27" />
-    <PackageReference Include="System.Text.Json" Version="5.0.2" />
->>>>>>> af050699d26dc41c5345d47111495612def26342
   </ItemGroup>
 
 </Project>

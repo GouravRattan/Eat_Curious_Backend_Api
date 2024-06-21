@@ -5,7 +5,6 @@ C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\MyCommonStruct
 C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\MyCommonStructure.runtimeconfig.json
 C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\MyCommonStructure.dll
 C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\MyCommonStructure.pdb
-C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\BouncyCastle.Crypto.dll
 C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\Google.Protobuf.dll
 C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\IdentityModel.dll
 C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\IdentityServer4.dll
@@ -22,8 +21,6 @@ C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\Microsoft.Iden
 C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\MySql.Data.dll
-C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\Ubiety.Dns.Core.dll
-C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\ZstdNet.dll
 C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\System.Drawing.Common.dll
@@ -122,3 +119,15 @@ F:\chrome download\Eat_Curious_Backend_Api-main\bin\Debug\net6.0\runtimes\win-x6
 F:\chrome download\Eat_Curious_Backend_Api-main\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 =======
 >>>>>>> af050699d26dc41c5345d47111495612def26342
+C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\System.IO.Pipelines.dll
+C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\ZstdSharp.dll
+C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\runtimes\win-x64\native\comerr64.dll
+C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\runtimes\win-x64\native\gssapi64.dll
+C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\runtimes\win-x64\native\krb5_64.dll
+C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\runtimes\win-x64\native\krbcc64.dll
+C:\Users\gourav.rattan\Desktop\MyCommonStructure\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
